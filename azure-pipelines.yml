@@ -11,5 +11,7 @@ steps:
     goals: 'clean -B package -Dmaven.test.skip=true'
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
-
   displayName: 'build service'
+
+- script: 'ls -la target'
+  displayName: 'Check Attifact'
