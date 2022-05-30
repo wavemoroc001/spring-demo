@@ -1,0 +1,15 @@
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Maven@3
+  inputs:
+    goals: 'clean -B package -Dmaven.test.skip=true'
+    jdkVersionOption: '1.11'
+    jdkArchitectureOption: 'x64'
+
+  displayName: 'build service'
